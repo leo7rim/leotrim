@@ -1,102 +1,68 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-	
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+
 body {
-	background: #808000;
-}
-.container {
-	background: white;
-	max-width: 800px;
-	margin: 60px auto;
-	height: 1250px;
-	padding: 20px;
-	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
-.header {
-	text-align: center;
-}
-.header h1 {
-	margin-bottom: 10px;
-}
-.header h3 {
-	text-transform: uppercase;
-	font-size: 15px;
-	font-weight: 500;
-}
-.img-area {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	overflow: hidden;
-	margin: 25px auto;
-}
-.img-area img {
-	width: 100%;
-}
-.main {
-	display: flex;
-	flex-wrap: wrap;
-}
-.left {
-	flex: 1;
-	padding: 30px;
-}
-.left p {
-	line-height: 2;
-}
-.left ul li {
-	line-height: 2;
-}
-h2 {
-	background: #808000;
-	padding: 15px;
-	color: white;
-	margin: 30px 0;
-	font-size: 20px;
-	border-radius: 0 50px 50px 0;
-}
-.right {
-	flex: 1;
-	padding: 30px;
-}
-.right h3 {
-	margin-bottom: 15px;
-}
-.right p {
-	line-height: 2.9;
-}
-.right ul li {
-	line-height: 2;
+    background: #808000;
+    font-size: 16px;
 }
 
 .container {
+    background: white;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
-.download-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #808000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+.header {
+    text-align: center;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
+.header h1 {
     margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-	outline: none;
 }
+
+.header h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.img-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+.img-area img {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 15px;
+}
+
+.left p, .left ul li, .right p, .right ul li {
+    font-size: 14px;
+}
+
+h2, h3 {
+    font-size: 18px;
+}
+
 .name-job {
     text-align: center;
     display: flex;
@@ -106,67 +72,44 @@ input[type="text"] {
 }
 
 .name-job input[type="text"] {
-    width: 200px;
+    width: 100%;
     padding: 8px;
-    margin: 5px;
+    margin: 5px 0;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-	outline: none;
+    outline: none;
 }
 
-.name-job button {
-    padding: 10px 20px;
-    background-color: #808000;
-    color: #fff;
-    text-decoration: none;
+.download-button, .upload-button, .name-job button {
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
-	outline: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.download-button, .name-job button {
+    background-color: #808000;
+    color: #fff;
 }
 
 .upload-button {
-    padding: 10px 30px;
     background-color: #3C4142;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    display: inline-block;
 }
 
-.upload-button:hover {
-    background-color: #808000;
+.download-button:hover, .upload-button:hover, .name-job button:hover {
+    background-color: #555;
 }
 
-input {
-    outline: none !important;
+/* Additional adjustments */
+.container {
+    height: auto;
 }
 
-/* Add this to your existing style.css file or create a new one */
-
-/* Style for the user buttons */
-.user-buttons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.container, .img-area, .left, .right {
+    margin: 15px auto;
 }
 
-.user-button {
-    padding: 10px 20px;
-    background-color: #808000; /* Change to the desired color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    margin-left: 10px;
-}
-
-.user-button:hover {
-    background-color: #6b6b00; /* Change to a slightly darker shade on hover */
-}
-
-
+/* Add more styles as needed */
