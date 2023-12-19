@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Personale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+  <div class="container">
+    <div class="header">
+        <div class="img-area">
+            <label for="profileImage" class="upload-button">Upload Image</label>
+            <input type="file" id="profileImage" accept="image/*" style="display:none;" />
+            <img id="displayImage" src="img/profile.jpg" alt="">
+        </div>
+        <div class="name-job">
+            <div class="name-job">
+              <input type="text" placeholder="Enter Name">
+              <input type="text" placeholder="Enter Job">
+        </div>
+
+        <div class="user-buttons">
+          <button class="user-button" onclick="signIn()">Sign In</button>
+          <button class="user-button" onclick="signUp()">Sign Up</button>
+      </div>
+
+
+        <div class="main">
+            <div class="left">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong> <input type="text" placeholder="Enter your name"></p>
+                <p><strong>Age:</strong> <input type="text" placeholder="Enter your age"></p>
+                <p><strong>Email:</strong> <input type="text" placeholder="Enter your email"></p>
+                <p><strong>Phone:</strong> <input type="text" placeholder="Enter your phone number"></p>
+                <h2>Skills</h2>
+                <ul>
+                    <li><input type="text" placeholder="Skill 1"></li>
+                    <li><input type="text" placeholder="Skill 2"></li>
+                </ul>
+                <h2>Education</h2>
+                <h3><input type="text" placeholder="Enter your degree"></h3>
+                <p><input type="text" placeholder="Enter your university"></p>
+            </div>
+
+            <div class="right">
+                <h2>Work Experience</h2>
+                <h3><input type="text" placeholder="Enter your company"></h3>
+                <p><strong>Position:</strong> <input type="text" placeholder="Enter your position"></p>
+                <p><strong>Duration:</strong> <input type="text" placeholder="Enter the duration"></p>
+                <ul>
+                    <li><input type="text" placeholder="Responsibility 1"></li>
+                    <li><input type="text" placeholder="Responsibility 2"></li>
+                    <li><input type="text" placeholder="Responsibility 3"></li>
+                </ul>
+                <button class="download-button" onclick="printCV()">Print</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById('profileImage').addEventListener('change', function (event) {
+          const input = event.target;
+          const reader = new FileReader();
+
+          reader.onload = function () {
+              const img = document.getElementById('displayImage');
+              img.src = reader.result;
+          };
+
+          reader.readAsDataURL(input.files[0]);
+      });
+</script>
+
+
+    <script>
+      function printCV() {
+          window.print();
+      }
+  </script>
+
+</body>
+</html>
